@@ -1,4 +1,3 @@
-// backend/routes/plans.js
 // Plans management routes
 
 const express = require('express');
@@ -65,7 +64,6 @@ router.get('/:planId', async (req, res) => {
     }
 });
 
-// Add after the existing routes in plans.js
 
 // GET /api/plans/check-subscription/:userId - Check if user has existing subscription
 router.get('/check-subscription/:userId', async (req, res) => {

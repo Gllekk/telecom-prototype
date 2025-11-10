@@ -78,7 +78,7 @@ async function handleProfileUpdate(event) {
     submitBtn.textContent = 'Saving...';
     
     try {
-        const response = await fetch(`http://localhost:3000/api/users/${currentUser.userId}`, {
+        const response = await fetch(`/api/users/${currentUser.userId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -149,7 +149,7 @@ function showSection(sectionId) {
 // Load bills for the user
 async function loadBills(userId) {
     try {
-        const response = await fetch(`http://localhost:3000/api/bills/user/${userId}`);
+        const response = await fetch(`/api/bills/user/${userId}`);
         const data = await response.json();
         
         if (response.ok && data.success) {

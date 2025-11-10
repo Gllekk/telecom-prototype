@@ -1,4 +1,4 @@
-// backend/routes/bills.js
+// Routes for getting bills
 const express = require('express');
 const router = express.Router();
 const { queryMany, queryOne } = require('../config/database');

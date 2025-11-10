@@ -1,4 +1,3 @@
-// backend/routes/auth.js
 // Authentication routes for registration and login
 
 const express = require('express');
@@ -36,7 +35,7 @@ router.post('/register', async (req, res) => {
     }
     
     try {
-        // Check if email already exists
+        // Check if the email already exists
         const existingUser = await queryOne(
             'SELECT user_id FROM USERS WHERE email = $1',
             [email]

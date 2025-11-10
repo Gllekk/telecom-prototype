@@ -1,4 +1,3 @@
-// backend/routes/users.js
 // User management routes
 
 const express = require('express');

@@ -1,4 +1,3 @@
-// backend/utils/utils.js
 // Utility functions for the backend
 
 const { queryOne } = require('../config/database');
@@ -9,7 +8,7 @@ async function generateUniqueId(prefix, table, column) {
     let exists = true;
     
     while (exists) {
-        // Generate random 7-digit number
+        // Generate a random 7-digit number
         const randomNum = Math.floor(Math.random() * 10000000).toString().padStart(7, '0');
         id = prefix + randomNum;
         

@@ -1,8 +1,8 @@
 // API Helper Functions
 // This file centralizes all backend API calls
 
-// Base API URL - change this when you deploy your backend
-const API_BASE_URL = 'http://localhost:3000/api';
+// Base API URL - uses relative paths for deployment
+const API_BASE_URL = '/api';
 
 // Helper function to make API requests
 async function apiRequest(endpoint, options = {}) {

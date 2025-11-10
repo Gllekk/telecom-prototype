@@ -1,4 +1,3 @@
-
 // Authentication state management
 // Uses sessionStorage for persistence across pages
 
@@ -39,7 +38,6 @@ function checkAuthStatus() {
     }
 }
 
-
 async function bill_btn(planName, planPrice) {
     if (!currentUser) {
         window.location.href = 'log_in.html';
@@ -48,14 +46,14 @@ async function bill_btn(planName, planPrice) {
     
     try {
         // Check if user has an existing subscription
-        const response = await fetch(`http://localhost:3000/api/plans/check-subscription/${currentUser.userId}`);
+        const response = await fetch(`/api/plans/check-subscription/${currentUser.userId}`);
         const data = await response.json();
         
         if (data.hasSubscription) {
             showMessage('You already have a subscription plan. Please contact technical support if you want to switch your plans');
         } else {
             // Create new subscription and bill
-            const subscribeResponse = await fetch('http://localhost:3000/api/plans/subscribe', {
+            const subscribeResponse = await fetch('/api/plans/subscribe', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -74,10 +72,10 @@ async function bill_btn(planName, planPrice) {
                 // Redirect to account page to see the bill
                 setTimeout(() => {
                     window.location.href = 'personal_account.html';
-                }, 3000); // Increased to 3 seconds to read the phone number
+                }, 3000);
             } else {
                 showMessage(subscribeData.message || 'Failed to create subscription');
-                console.error('Subscription error:', subscribeData); // Added for debugging
+                console.error('Subscription error:', subscribeData);
             }
         }
     } catch (error) {
@@ -166,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
     checkAuthStatus();
 });
 
-// Handle "My Account" link clicks throughout the site
+// Handle My Account link clicks throughout the site
 document.addEventListener('DOMContentLoaded', () => {
     const accountLinks = document.querySelectorAll('a[href="personal_account.html"]');
     accountLinks.forEach(link => {

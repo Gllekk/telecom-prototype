@@ -3,8 +3,7 @@
 const { Pool } = require('pg');
 
 // Create a connection pool
-// In production, use DATABASE_URL from Render
-// In development, use individual env variables
+// Using DATABASE_URL from Render
 const pool = new Pool(
     process.env.DATABASE_URL
         ? {
