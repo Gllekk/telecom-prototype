@@ -1,16 +1,26 @@
-// backend/config/database.js
 // PostgreSQL database connection configuration
 
 const { Pool } = require('pg');
 
 // Create a connection pool
-const pool = new Pool({
-    user: process.env.DB_USER,
-    host: process.env.DB_HOST,
-    database: process.env.DB_NAME,
-    password: process.env.DB_PASSWORD,
-    port: process.env.DB_PORT || 5432,
-});
+// In production, use DATABASE_URL from Render
+// In development, use individual env variables
+const pool = new Pool(
+    process.env.DATABASE_URL
+        ? {
+            connectionString: process.env.DATABASE_URL,
+            ssl: {
+                rejectUnauthorized: false
+            }
+        }
+        : {
+            user: process.env.DB_USER,
+            host: process.env.DB_HOST,
+            database: process.env.DB_NAME,
+            password: process.env.DB_PASSWORD,
+            port: process.env.DB_PORT || 5432,
+        }
+);
 
 // Test the connection
 pool.on('connect', () => {
@@ -28,7 +38,7 @@ const query = async (text, params) => {
     try {
         const res = await pool.query(text, params);
         const duration = Date.now() - start;
-        console.log('Executed query', { text, duration, rows: res.rowCount });
+        console.log('Executed query', { text: text.substring(0, 50) + '...', duration, rows: res.rowCount });
         return res;
     } catch (error) {
         console.error('Database query error:', error);
