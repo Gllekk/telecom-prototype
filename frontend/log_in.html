@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOSTELECOM - Login</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+
+
+<body class="auth-body">
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <a href="data_plans.html" class="top-link">
+                <img src="assets/icons/user.svg" alt="Private Customers" class="top-icon">
+                <span>Private Customers</span>
+            </a>
+            <span class="top-link inactive">
+                <img src="assets/icons/business.svg" alt="Business" class="top-icon">
+                <span>Business</span>
+            </span>
+        </div>
+        <div class="top-bar-right">
+            <button class="login-btn" onclick="window.location.href='sign_up.html'">Sign up</button>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/icons/logo.svg" alt="SOSTELECOM" class="logo-icon">
+                <span class="logo-text">SOSTELECOM.</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="data_plans.html">Data Plans</a></li>
+                <li><a href="personal_account.html">My Account</a></li>
+                <li><a href="promotions.html">Promotions</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Login Form -->
+    <main class="auth-container">
+        <div class="auth-box">
+            <div class="auth-logo">
+                <img src="assets/icons/logo.svg" alt="SOSTELECOM" class="auth-logo-icon">
+                <span class="auth-logo-text">SOSTELECOM.</span>
+            </div>
+
+            <div class="auth-form">
+                <h1>Login</h1>
+                <p class="auth-subtitle">Enter your phone number or email that is linked to your account.</p>
+                
+                <p class="auth-redirect">Don't have an account? <a href="sign_up.html" class="auth-link">Sign up.</a></p>
+
+                <form id="loginForm" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <input 
+                            type="email" 
+                            id="loginEmail" 
+                            placeholder="Enter your email" 
+                            required
+                            class="form-input"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <input 
+                            type="password" 
+                            id="loginPassword" 
+                            placeholder="Enter your password" 
+                            required
+                            class="form-input"
+                        >
+                    </div>
+
+                    <a href="#" class="forgot-password" onclick="showMessage('Password reset is under construction'); return false;">Forgot your password?</a>
+
+                    <button type="submit" class="auth-submit-btn">Continue</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- App Promotion -->
+    <section class="app-section">
+        <div class="app-content">
+            <h2>Try out our app!</h2>
+            <div class="app-buttons">
+                <img src="assets/icons/appstore.svg" alt="Download on App Store" class="app-badge">
+                <img src="assets/icons/googleplay.svg" alt="Get it on Google Play" class="app-badge">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul>
+                    <li>Perfect roaming</li>
+                    <li>International calls</li>
+                    <li>Residential plans</li>
+                    <li>Family services</li>
+                    <li>Cable TV</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="assets/icons/logo.svg" alt="SOSTELECOM" class="footer-logo-icon">
+                    <span class="footer-logo-text">SOSTELECOM.</span>
+                </div>
+                <ul class="footer-info">
+                    <li>Our store addresses</li>
+                    <li>About us</li>
+                    <li>News</li>
+                    <li>Social responsibility</li>
+                    <li>Information regarding your number</li>
+                    <li>Shareholder and stakeholder information</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Useful</h3>
+                <ul>
+                    <li>Privacy</li>
+                    <li>Submit a request</li>
+                    <li>Careers</li>
+                    <li>Data plans archive</li>
+                    <li>Apps</li>
+                    <li>For investors</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2000 - 2025 SOSTELECOM. All rights reserved. Use of materials from this site is possible only with the prior written consent of SOSTELECOM.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

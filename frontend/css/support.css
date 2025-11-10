@@ -1,0 +1,135 @@
+
+/* Support Page Specific Styles */
+
+/* Active navigation link */
+.nav-links a.active {
+    color: #e67e50;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
+}
+
+.support-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 40px 60px;
+}
+
+/* FAQ Header Section */
+.faq-header {
+    margin-bottom: 50px;
+}
+
+.faq-header h1 {
+    color: #e0e0e0;
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.faq-subtitle {
+    color: #b0b0b0;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* FAQ Categories */
+.faq-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.faq-category {
+    background-color: #3a3a3a;
+    border: none;
+    color: #e0e0e0;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.faq-category:hover {
+    background-color: #424242;
+}
+
+/* FAQ Content Grid */
+.faq-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 40px;
+}
+
+.faq-column h2 {
+    color: #e0e0e0;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* FAQ Lists */
+.faq-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.faq-list li {
+    margin-bottom: 12px;
+}
+
+.faq-list a {
+    color: #e67e50;
+    font-size: 15px;
+    transition: opacity 0.3s;
+    display: block;
+}
+
+.faq-list a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* All Questions Link */
+.all-questions-link {
+    color: #e67e50;
+    font-size: 15px;
+    transition: opacity 0.3s;
+    display: inline-block;
+}
+
+.all-questions-link:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .faq-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .faq-header h1 {
+        font-size: 28px;
+    }
+    
+    .faq-subtitle {
+        font-size: 16px;
+    }
+    
+    .faq-categories {
+        gap: 10px;
+    }
+    
+    .faq-category {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+    
+    .faq-column h2 {
+        font-size: 20px;
+    }
+}

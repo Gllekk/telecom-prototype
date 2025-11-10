@@ -1,0 +1,23 @@
+{
+  "name": "telecom-prototype",
+  "version": "1.0.0",
+  "description": "Telecom website prototype",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "pg": "^8.16.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "bcrypt": "^6.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

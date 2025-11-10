@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOSTELECOM - Home</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <a href="data_plans.html" class="top-link">
+                <img src="assets/icons/user.svg" alt="Private Customers" class="top-icon">
+                <span>Private Customers</span>
+            </a>
+            <span class="top-link inactive">
+                <img src="assets/icons/business.svg" alt="Business" class="top-icon">
+                <span>Business</span>
+            </span>
+        </div>
+        <div class="top-bar-right">
+            <button id="loginBtn" class="login-btn" onclick="handleLoginClick()">Login</button>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/icons/logo.svg" alt="SOSTELECOM" class="logo-icon">
+                <span class="logo-text">SOSTELECOM.</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="data_plans.html">Data Plans</a></li>
+                <li><a href="personal_account.html">My Account</a></li>
+                <li><a href="promotions.html">Promotions</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Ad Space) -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <!-- Placeholder for advertisement/banner -->
+        </div>
+    </section>
+
+    <!-- Quick Actions -->
+    <section class="quick-actions">
+        <a href="personal_account.html" class="action-card">
+            <img src="assets/icons/logo.svg" alt="My Account" class="action-icon">
+            <span>My Account</span>
+        </a>
+        <a href="data_plans.html" class="action-card">
+            <img src="assets/icons/phone.svg" alt="Choose a Plan" class="action-icon">
+            <span>Choose a Plan</span>
+        </a>
+        <a href="support.html" class="action-card">
+            <img src="assets/icons/support.svg" alt="Support" class="action-icon">
+            <span>Support</span>
+        </a>
+    </section>
+
+    <!-- Various Data Plans -->
+    <section class="data-plans-section">
+        <h2>Various Data Plans</h2>
+        <div class="plans-grid">
+            <a href="data_plans.html#personal" class="plan-card">
+                <img src="assets/icons/personal.svg" alt="Personal plans" class="plan-icon">
+                <h3>Personal plans</h3>
+                <p>Choose one of available plans, pay for the first month and enjoy the benefits!</p>
+            </a>
+            <a href="data_plans.html#residential" class="plan-card">
+                <img src="assets/icons/home.svg" alt="Residential plans" class="plan-icon">
+                <h3>Residential plans</h3>
+                <p>Choose one of available plans, pay for the first month and enjoy the benefits!</p>
+            </a>
+            <a href="data_plans.html#business" class="plan-card">
+                <img src="assets/icons/briefcase.svg" alt="Business plans" class="plan-icon">
+                <h3>Business plans</h3>
+                <p>Contact the sales rep, discuss the conditions, pay for the first month and enjoy!</p>
+            </a>
+        </div>
+        <a href="data_plans.html" class="section-link">Go to all data plans ></a>
+    </section>
+
+    <!-- Useful Services -->
+    <section class="services-section">
+        <h2>Things that can be useful to you</h2>
+        <div class="services-grid">
+            <div class="service-card placeholder">
+                <img src="assets/icons/simcard.svg" alt="Get a SIM card" class="service-icon">
+                <span>Get a SIM card</span>
+            </div>
+            <div class="service-card placeholder">
+                <img src="assets/icons/family.svg" alt="Join the family" class="service-icon">
+                <span>Join the family</span>
+            </div>
+            <div class="service-card placeholder">
+                <img src="assets/icons/tv.svg" alt="Get cable TV" class="service-icon">
+                <span>Get cable TV</span>
+            </div>
+            <div class="service-card placeholder">
+                <img src="assets/icons/logo.svg" alt="Number transfer" class="service-icon">
+                <span>Number transfer</span>
+            </div>
+            <a href="promotions.html" class="service-card">
+                <img src="assets/icons/present.svg" alt="Promotions" class="service-icon">
+                <span>Promotions</span>
+            </a>
+            <div class="service-card placeholder">
+                <img src="assets/icons/dots.svg" alt="Other services" class="service-icon">
+                <span>Other services</span>
+            </div>
+        </div>
+        <a href="under_construction.html" class="section-link">Go to all services ></a>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>We are glad to help you!</h2>
+        <p class="faq-subtitle">See answers to frequently asked questions</p>
+        <div class="faq-topics">
+            <a href="support.html" class="faq-topic">Bills and data plans</a>
+            <a href="support.html" class="faq-topic">Calls and messages</a>
+            <a href="support.html" class="faq-topic">Mobile plans</a>
+            <a href="support.html" class="faq-topic">Residential plans</a>
+            <a href="support.html" class="faq-topic">My account</a>
+        </div>
+        <a href="support.html" class="section-link">Go to the FAQ page ></a>
+    </section>
+
+    <!-- App Promotion -->
+    <section class="app-section">
+        <div class="app-content">
+            <h2>Try out our app!</h2>
+            <div class="app-buttons">
+                <img src="assets/icons/appstore.svg" alt="Download on App Store" class="app-badge">
+                <img src="assets/icons/googleplay.svg" alt="Get it on Google Play" class="app-badge">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul>
+                    <li>Perfect roaming</li>
+                    <li>International calls</li>
+                    <li>Residential plans</li>
+                    <li>Family services</li>
+                    <li>Cable TV</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="assets/icons/logo.svg" alt="SOSTELECOM" class="footer-logo-icon">
+                    <span class="footer-logo-text">SOSTELECOM.</span>
+                </div>
+                <ul class="footer-info">
+                    <li>Our store addresses</li>
+                    <li>About us</li>
+                    <li>News</li>
+                    <li>Social responsibility</li>
+                    <li>Information regarding your number</li>
+                    <li>Shareholder and stakeholder information</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Useful</h3>
+                <ul>
+                    <li>Privacy</li>
+                    <li>Submit a request</li>
+                    <li>Careers</li>
+                    <li>Data plans archive</li>
+                    <li>Apps</li>
+                    <li>For investors</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2000 - 2025 SOSTELECOM. All rights reserved. Use of materials from this site is possible only with the prior written consent of SOSTELECOM.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

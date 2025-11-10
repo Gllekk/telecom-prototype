@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOSTELECOM - My Account</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/account.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <a href="data_plans.html" class="top-link">
+                <img src="assets/icons/user.svg" alt="Private Customers" class="top-icon">
+                <span>Private Customers</span>
+            </a>
+            <span class="top-link inactive">
+                <img src="assets/icons/business.svg" alt="Business" class="top-icon">
+                <span>Business</span>
+            </span>
+        </div>
+        <div class="top-bar-right">
+            <button id="loginBtn" class="login-btn" onclick="handleLoginClick()">Login</button>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/icons/logo.svg" alt="SOSTELECOM" class="logo-icon">
+                <span class="logo-text">SOSTELECOM.</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="data_plans.html">Data Plans</a></li>
+                <li><a href="personal_account.html" class="active">My Account</a></li>
+                <li><a href="promotions.html">Promotions</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Account Page Content -->
+    <div class="account-page">
+        <!-- Sidebar -->
+        <aside class="account-sidebar">
+            <!-- My Profile Section -->
+            <div class="sidebar-section">
+                <div class="sidebar-header" onclick="toggleSection('profile')">
+                    <img src="assets/icons/user.svg" alt="Profile" class="sidebar-icon">
+                    <span>My Profile</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="sidebar-content active" id="profile-content">
+                    <button class="sidebar-link active" onclick="showSection('main-info')">Main Information</button>
+                </div>
+            </div>
+
+            <!-- Security Settings Section -->
+            <div class="sidebar-section">
+                <div class="sidebar-header" onclick="toggleSection('security')">
+                    <img src="assets/icons/shield.svg" alt="Security" class="sidebar-icon">
+                    <span>Security Settings</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="sidebar-content" id="security-content">
+                    <button class="sidebar-link" onclick="showSection('login-security')">Login and Security</button>
+                </div>
+            </div>
+
+            <!-- Finances Section -->
+            <div class="sidebar-section">
+                <div class="sidebar-header" onclick="toggleSection('finances')">
+                    <span class="sidebar-dollar">$</span>
+                    <span>Finances</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="sidebar-content" id="finances-content">
+                    <button class="sidebar-link" onclick="showSection('bills')">Bills</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="account-main">
+            <!-- Main Information Section -->
+            <section class="content-section active" id="main-info">
+                <h1>Main Information</h1>
+                
+                <div class="profile-photo-section">
+                    <div class="profile-photo">
+                        <img src="assets/icons/user-large.svg" alt="Profile Photo" class="profile-photo-img">
+                    </div>
+                    <button class="change-photo-btn" onclick="showMessage('Photo upload is under construction')">+</button>
+                </div>
+
+                <form id="profileForm" onsubmit="handleProfileUpdate(event)">
+                    <div class="form-section">
+                        <label class="form-label">First and Last Names</label>
+                        <input type="text" id="firstNameField" class="account-input" placeholder="First Name" required>
+                        <input type="text" id="lastNameField" class="account-input" placeholder="Last Name" required>
+                    </div>
+
+                    <div class="form-section">
+                        <label class="form-label">Email</label>
+                        <input type="email" id="emailField" class="account-input" placeholder="your.email@example.com" readonly>
+                    </div>
+
+                    <div class="form-section">
+                        <label class="form-label">Gender</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="male">
+                                <span>Male</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="female">
+                                <span>Female</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="other">
+                                <span>Other</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="not_specified" checked>
+                                <span>Prefer not to specify</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="save-btn">Save Changes</button>
+                </form>
+            </section>
+
+            <!-- Login and Security Section -->
+            <section class="content-section" id="login-security">
+                <h1>Login and Security</h1>
+                
+                <form onsubmit="showMessage('Security settings are under construction'); return false;">
+                    <div class="form-section">
+                        <label class="form-label">Account Login Method</label>
+                        
+                        <div class="security-option selected">
+                            <label class="radio-label-large">
+                                <input type="radio" name="loginMethod" value="password" checked>
+                                <div class="option-content">
+                                    <strong>Using a Password</strong>
+                                    <p>We recommend changing your password periodically.</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="security-option disabled">
+                            <label class="radio-label-large">
+                                <input type="radio" name="loginMethod" value="otp" disabled>
+                                <div class="option-content">
+                                    <strong>Using a One-Time Code in the Message or Email</strong>
+                                    <p>The code is sent to the number or email that you use as your login to log in to your account.</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="security-option disabled">
+                            <label class="radio-label-large">
+                                <input type="radio" name="loginMethod" value="2fa-password" disabled>
+                                <div class="option-content">
+                                    <strong>Two-Step Verification with a Password and a One-Time Code</strong>
+                                    <p>First you will need to enter your password, and then a code that will be sent to your phone number or email.</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="security-option disabled">
+                            <label class="radio-label-large">
+                                <input type="radio" name="loginMethod" value="2fa-ussd" disabled>
+                                <div class="option-content">
+                                    <strong>Two-Step Verification with USSD and a One-Time Code</strong>
+                                    <p>First you will need to make a USSD request, and then a code that will be sent to your phone number or email.</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="save-btn">Save Changes</button>
+                </form>
+            </section>
+
+            <!-- Bills Section -->
+            <section class="content-section" id="bills">
+                <h1>All Invoices</h1>
+                
+                <p class="bills-info">
+                    Questions about invoices or payments? Find information <a href="support.html" class="info-link">here</a>.
+                </p>
+
+                <div id="billsContainer">
+                    <!-- Bills will be loaded here dynamically -->
+                    <div class="no-bills-message">
+                        <p>No bills yet</p>
+                    </div>
+                </div>
+
+                <button class="view-all-btn" id="viewAllBtn" style="display: none;" onclick="loadAllBills()">View All</button>
+            </section>
+        </main>
+    </div>
+
+    <!-- App Promotion -->
+    <section class="app-section">
+        <div class="app-content">
+            <h2>Try out our app!</h2>
+            <div class="app-buttons">
+                <img src="assets/icons/appstore.svg" alt="Download on App Store" class="app-badge">
+                <img src="assets/icons/googleplay.svg" alt="Get it on Google Play" class="app-badge">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul>
+                    <li>Perfect roaming</li>
+                    <li>International calls</li>
+                    <li>Residential plans</li>
+                    <li>Family services</li>
+                    <li>Cable TV</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="assets/icons/logo.svg" alt="SOSTELECOM" class="footer-logo-icon">
+                    <span class="footer-logo-text">SOSTELECOM.</span>
+                </div>
+                <ul class="footer-info">
+                    <li>Our store addresses</li>
+                    <li>About us</li>
+                    <li>News</li>
+                    <li>Social responsibility</li>
+                    <li>Information regarding your number</li>
+                    <li>Shareholder and stakeholder information</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Useful</h3>
+                <ul>
+                    <li>Privacy</li>
+                    <li>Submit a request</li>
+                    <li>Careers</li>
+                    <li>Data plans archive</li>
+                    <li>Apps</li>
+                    <li>For investors</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2000 - 2025 SOSTELECOM. All rights reserved. Use of materials from this site is possible only with the prior written consent of SOSTELECOM.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/account.js"></script>
+</body>
+</html>

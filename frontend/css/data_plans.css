@@ -1,0 +1,261 @@
+/* Data Plans Page Specific Styles */
+
+
+/* Active navigation link */
+.nav-links a.active {
+    color: #e67e50;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
+}
+
+/* Plans Page Container */
+.plans-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 40px 60px;
+}
+
+.plans-container > h2 {
+    color: #e0e0e0;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* Plan Tabs */
+.plan-tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #3a3a3a;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: #b0b0b0;
+    padding: 12px 0;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    margin-right: 40px;
+    transition: color 0.3s;
+}
+
+.tab-btn:hover {
+    color: #e0e0e0;
+}
+
+.tab-btn.active {
+    color: #e0e0e0;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #e67e50;
+    transition: left 0.3s ease, right 0.3s ease;
+}
+
+/* Plan Sections */
+.plan-section {
+    display: none;
+}
+
+.plan-section.active {
+    display: block;
+}
+
+/* Plans Display Grid */
+.plans-display {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* Individual Plan Box */
+.plan-box {
+    background-color: #3a3a3a;
+    border-radius: 8px;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.plan-box:hover {
+    background-color: #424242;
+    transform: translateY(-5px);
+}
+
+.plan-title {
+    color: #e67e50;
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+.plan-features {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.plan-features p {
+    color: #e0e0e0;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.plan-roaming {
+    margin-bottom: 25px;
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px solid #505050;
+}
+
+.plan-roaming p {
+    color: #b0b0b0;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.plan-price {
+    color: #e67e50;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.plan-signup{
+    display: block;
+    background-color: #e67e50;
+    color: white;
+    padding: 12px 32px;
+    border-radius: 6px;
+    font-size: 24px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    border-color: #3a3a3a;
+    border-style: solid;
+}
+
+/* Business Plans Message */
+.business-message {
+    background-color: #3a3a3a;
+    border-radius: 8px;
+    padding: 60px 40px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.business-message h2 {
+    color: #e67e50;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.business-message p {
+    color: #b0b0b0;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.contact-btn {
+    display: inline-block;
+    background-color: #e67e50;
+    color: white;
+    padding: 12px 32px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #d16d42;
+}
+
+/* Interesting Section */
+.interesting-section {
+    max-width: 1200px;
+    margin: 60px auto 0;
+    padding: 0 0 40px;
+}
+
+.interesting-section h2 {
+    color: #e0e0e0;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.interesting-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.interesting-card {
+    background-color: #3a3a3a;
+    border-radius: 8px;
+    padding: 30px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.interesting-card:hover {
+    background-color: #424242;
+    transform: translateY(-3px);
+}
+
+.interesting-card.placeholder {
+    cursor: default;
+    opacity: 0.8;
+}
+
+.interesting-card.placeholder:hover {
+    background-color: #3a3a3a;
+    transform: none;
+}
+
+.interesting-card h3 {
+    color: #e67e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.interesting-card p {
+    color: #b0b0b0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .plans-display {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .interesting-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .plans-display {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-btn {
+        margin-right: 20px;
+        font-size: 14px;
+    }
+}

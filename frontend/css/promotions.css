@@ -1,0 +1,187 @@
+/* Promotions Page Specific Styles */
+
+/* Active navigation link */
+.nav-links a.active {
+    color: #e67e50;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
+}
+
+.promotions-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 40px;
+}
+
+/* Hero Promotion Section */
+.promo-hero {
+    margin-bottom: 60px;
+}
+
+.promo-hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.promo-hero-text h1 {
+    color: #e0e0e0;
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.promo-hero-text p {
+    color: #b0b0b0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.promo-hero-image {
+    background: linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%);
+    border: 3px solid #e67e50;
+    border-radius: 12px;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Number Entry Promotion */
+.number-promo {
+    margin-bottom: 60px;
+}
+
+.number-promo-content {
+    background-color: #3a3a3a;
+    border: 3px solid #e67e50;
+    border-radius: 12px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.number-promo-image {
+    background-color: #e67e50;
+    border-radius: 8px;
+    min-height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number-promo-text h2 {
+    color: #e0e0e0;
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+.number-input-btn {
+    background: transparent;
+    border: 2px solid #e67e50;
+    color: #e0e0e0;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.number-input-btn:hover {
+    background-color: #e67e50;
+    color: #1a1a1a;
+}
+
+/* Interesting Section */
+.interesting-section {
+    margin-bottom: 40px;
+}
+
+.interesting-section h2 {
+    color: #e0e0e0;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.interesting-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.interesting-card {
+    background-color: #3a3a3a;
+    border-radius: 8px;
+    padding: 30px;
+    cursor: default;
+}
+
+.interesting-card.placeholder {
+    opacity: 0.8;
+}
+
+.interesting-card h3 {
+    color: #e67e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.interesting-card p {
+    color: #b0b0b0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .promo-hero-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .promo-hero-image {
+        min-height: 200px;
+    }
+    
+    .number-promo-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px;
+    }
+    
+    .number-promo-image {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .interesting-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .promo-hero-text h1 {
+        font-size: 28px;
+    }
+    
+    .promo-hero-text p {
+        font-size: 16px;
+    }
+    
+    .number-promo-text h2 {
+        font-size: 22px;
+    }
+    
+    .number-promo-content {
+        padding: 30px;
+    }
+}
