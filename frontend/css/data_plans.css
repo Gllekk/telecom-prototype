@@ -140,12 +140,18 @@
     color: white;
     padding: 12px 32px;
     border-radius: 6px;
+    cursor: pointer;
     font-size: 24px;
     font-weight: 500;
     transition: background-color 0.3s;
     border-color: #3a3a3a;
     border-style: solid;
 }
+
+.plan-signup:hover{
+    background-color: #d16d42;
+}
+
 
 /* Business Plans Message */
 .business-message {
